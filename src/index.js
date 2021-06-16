@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import App, { desg2, myname, desg } from './App';
+import App from './App';
+import Add, { Sub, Div, Mult } from './Calc.js';
 
 ReactDom.render(
   <>
     <App />
-    <h1>{myname}</h1>
-    <h1>{desg}</h1>
-    <h1>{desg2}</h1>
+    <ol>
+      <li>Sum of two number {Add(5, 10)}</li>
+      <li>Subtraction of two number {Sub(15, 10)}</li>
+      <li>Division of two number {Div(5, 10)}</li>
+      <li>Multiplication of two number {Mult(5, 10)}</li>
+    </ol>
   </>,
   document.getElementById('root')
 );
